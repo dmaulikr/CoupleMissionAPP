@@ -20,7 +20,7 @@
 /*
  일단, NSMutableArray에 NSDictionary로 미션을 쭉 나열해서 저장
  
- - missionList의 index은
+ - missionList의 index는
    MissionTag 순서대로 쭉 나열된 후,
    CustomMission이 들어감
  
@@ -41,19 +41,32 @@
  
  */
 
+@property (nonatomic) NSMutableDictionary *currentMission;
+
+@property (nonatomic) NSMutableArray *realMissionList;
+
 @property (nonatomic) NSMutableArray *missionList;
 
 
 // 기본 미션 태그
+@property (nonatomic, readonly) NSArray *tagNameArr;
+
 typedef NS_ENUM(NSInteger, MissionTag) {
     COOKING = 0,    // 요리하기
     FLOWER,         // 꽃주기
     MASSAGE,        // 안마하기
+    HANGANG,
+    MEDITATION,
+    DONOTHING,
+    PRESENT,
+    HEALTH,
+    SELFIE,
+    EXERCISE,
     
     NumOfMissionTag     // 항상 마지막에 둬서, count 갯수 값으로 사용
 };
 
-@property (nonatomic) NSArray *missionTagStatusArr;    // 미션태그 세팅 어레이   NO : @0, YES : @1
+@property (nonatomic) NSMutableArray *missionTagStatusArr;    // 미션태그 세팅 어레이   NO : @0, YES : @1
 - (void)setMissionListByMissionTagStatusArr;       // missionTagStatusArr에 완료된 설정된 대로 missionList 세팅
 
 
@@ -61,6 +74,8 @@ typedef NS_ENUM(NSInteger, MissionTag) {
 // 커스텀 미션 추가
 - (void)addMissionListWithMissionName:(NSString *)missionName;  // 미션명으로 추가
 
+// TableView List에 들어갈 RealMissionList set
+- (void)setRealMissionList;
 
 
 @end

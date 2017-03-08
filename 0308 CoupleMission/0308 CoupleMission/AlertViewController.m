@@ -23,6 +23,7 @@
     self.alertImg.layer.cornerRadius = 45;
     self.alertImg.layer.masksToBounds = YES;
 
+    self.missionText.text = @"text...";
   
 }
 

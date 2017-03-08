@@ -8,24 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		BA4931D31E702D2600101864 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4931D21E702D2600101864 /* main.m */; };
-		BA4931D61E702D2600101864 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4931D51E702D2600101864 /* AppDelegate.m */; };
-		BA4931D91E702D2600101864 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4931D81E702D2600101864 /* ViewController.m */; };
 		BA4931DC1E702D2600101864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4931DA1E702D2600101864 /* Main.storyboard */; };
-		BA4931DE1E702D2600101864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4931DD1E702D2600101864 /* Assets.xcassets */; };
 		BA4931E11E702D2600101864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4931DF1E702D2600101864 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FBAB5FA1E70AB7200103591 /* Hackerthon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Hackerthon.xcodeproj; sourceTree = SOURCE_ROOT; };
 		BA4931CE1E702D2600101864 /* Hackerthon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackerthon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4931D21E702D2600101864 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BA4931D41E702D2600101864 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BA4931D51E702D2600101864 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BA4931D71E702D2600101864 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BA4931D81E702D2600101864 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BA4931DB1E702D2600101864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BA4931DD1E702D2600101864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA4931E01E702D2600101864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BA4931E21E702D2600101864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +31,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FBAB5FB1E70AB7200103591 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BA4931C51E702D2500101864 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +55,9 @@
 		BA4931D01E702D2600101864 /* Hackerthon */ = {
 			isa = PBXGroup;
 			children = (
-				BA4931D41E702D2600101864 /* AppDelegate.h */,
-				BA4931D51E702D2600101864 /* AppDelegate.m */,
-				BA4931D71E702D2600101864 /* ViewController.h */,
-				BA4931D81E702D2600101864 /* ViewController.m */,
+				3FBAB5FA1E70AB7200103591 /* Hackerthon.xcodeproj */,
 				BA4931DA1E702D2600101864 /* Main.storyboard */,
-				BA4931DD1E702D2600101864 /* Assets.xcassets */,
 				BA4931DF1E702D2600101864 /* LaunchScreen.storyboard */,
-				BA4931E21E702D2600101864 /* Info.plist */,
 				BA4931D11E702D2600101864 /* Supporting Files */,
 			);
 			path = Hackerthon;
@@ -126,6 +118,12 @@
 			mainGroup = BA4931C51E702D2500101864;
 			productRefGroup = BA4931CF1E702D2600101864 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3FBAB5FB1E70AB7200103591 /* Products */;
+					ProjectRef = 3FBAB5FA1E70AB7200103591 /* Hackerthon.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BA4931CD1E702D2600101864 /* Hackerthon */,
@@ -139,7 +137,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA4931E11E702D2600101864 /* LaunchScreen.storyboard in Resources */,
-				BA4931DE1E702D2600101864 /* Assets.xcassets in Resources */,
 				BA4931DC1E702D2600101864 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,8 +148,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA4931D91E702D2600101864 /* ViewController.m in Sources */,
-				BA4931D61E702D2600101864 /* AppDelegate.m in Sources */,
 				BA4931D31E702D2600101864 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +305,7 @@
 				BA4931E71E702D2600101864 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
