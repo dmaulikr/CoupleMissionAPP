@@ -5,11 +5,17 @@
 
 
 
+<br>
 ####Team Members
-"김예주"  devssgg@gmail.com
-"최제헌" c92921@hanmail.net
-"여상민" devssgg@gmail.com
-"천민정" indie.me.chun@gmail.com
+**"김예주"  devssgg@gmail.com**
+<br>
+**"최제헌" c92921@hanmail.net**
+<br>
+**"여상민" devssgg@gmail.com**
+<br>
+**"천민정" indie.me.chun@gmail.com**
+
+<br>
 
 ####Project Demo
 1. 내가 상대방에게 원하는 미션 태그를 선택해주세요.
@@ -20,28 +26,33 @@
 
 ####UI
 
-* pingpong로고
-
-![스크린샷 2017-03-09 오전 6.33.59.png](/Users/katniss/Desktop/스크린샷 2017-03-09 오전 6.33.59.png)
+**pingpong로고**
 
 
-* 태그뷰
-
-![스크린샷 2017-03-09 오전 6.23.37.png](/Users/katniss/Desktop/스크린샷 2017-03-09 오전 6.23.37.png)
-
-
-<br>
+![logo.png](/Users/katniss/Desktop/logo.png)
 
 
 
-* 리스트뷰
+**태그뷰**
 
-![스크린샷 2017-03-09 오전 6.31.32.png](/Users/katniss/Desktop/스크린샷 2017-03-09 오전 6.31.32.png)
+![11.png](/Users/katniss/Desktop/11.png)
 
 
-* 미션추가 뷰
 
-![스크린샷 2017-03-09 오전 6.32.44.png](/Users/katniss/Desktop/스크린샷 2017-03-09 오전 6.32.44.png)
+
+**리스트뷰**
+
+![list.png](/Users/katniss/Desktop/list.png)
+
+
+
+
+
+**당신의 미션 뷰**
+
+![mission.png](/Users/katniss/Desktop/mission.png)
+
+
 
 
 
