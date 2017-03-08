@@ -1,15 +1,27 @@
 //
 //  ViewController.m
-//  CoupleMission
+//  0308 CoupleMission
 //
-//  Created by Jeheon Choi on 2017. 3. 8..
-//  Copyright © 2017년 JeheonChoi. All rights reserved.
+//  Created by katniss on 2017. 3. 8..
+//  Copyright © 2017년 katniss. All rights reserved.
 //
 
 #import "MainViewController.h"
+#import "TableViewCell.h"
 #import "DataCenter.h"
+#import "TagAlertViewController.h"
+#import "MissionViewController.h"
+
 
 @interface MainViewController ()
+<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, TagAlertViewControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (strong, nonatomic) NSArray *arrayList;
+@property (strong, nonatomic) NSDictionary *tableList1;
+@property (weak, nonatomic) IBOutlet UIView *btView;
+@property (weak, nonatomic) IBOutlet UITextField *btTextField;
+@property (weak, nonatomic) IBOutlet UIButton *btDone;
 
 @end
 
@@ -17,15 +29,156 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSLog(@"시작");
+
+    // TagAlertView
+    [self willTagAlertView];
+    
+    
+    
+    // btTextField delegate
+    self.btTextField.delegate = self;
+    
+    // myTableView delegate
+    self.myTableView.delegate = self;
+    self.myTableView.dataSource = self;
+    
+    self.myTableView.layer.cornerRadius = 8;
+    
+    
+    //profile img 넣기
+    self.myProfileImg.image = [UIImage imageNamed:@"p1.png"];
+    
+    self.connectImg.image = [UIImage imageNamed:@"connect.png"];
+    
+    self.yourProfileImg.image = [UIImage imageNamed:@"p2.png"];
+    
+    
+    //bound
+    self.myProfileImg.layer.cornerRadius = 45;
+    self.myProfileImg.layer.masksToBounds = YES;
+    
+    self.yourProfileImg.layer.cornerRadius = 45;
+    self.yourProfileImg.layer.masksToBounds = YES;
+    
+    
+    
     
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    
 }
 
+//1.section*
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+//2.row* - tablelist
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [DataCenter sharedData].realMissionList.count;
+}
+
+//3. uitableview cell*
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSLog(@"%ld", indexPath.row);
+    
+    //4. dequeue* 하고 identifier*
+    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"hello" forIndexPath:indexPath];
+    
+    
+    //5.dictionary* -> array*에서 indext.row*
+    NSDictionary *dictemp = [[DataCenter sharedData].realMissionList objectAtIndex:indexPath.row];
+    
+    
+    //6.table cell에 list 넣어주기
+    cell.missionLable.text = [dictemp objectForKey:@"Name"];
+    
+    
+    return cell;
+    
+}
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    
+}
+
+- (IBAction)addBtnClick:(id)sender {
+    
+    self.btView.center = CGPointMake(self.view.center.x, self.view.frame.size.height + self.btView.frame.size.height/2);
+    
+    [self.btView setHidden:NO];
+    
+    [UIView animateWithDuration:1 animations:^{
+        self.btView.center = CGPointMake(self.view.center.x, self.view.center.y);
+    }];
+    
+    
+    
+    
+}
+
+- (IBAction)hiddenView:(id)sender {
+    
+    [self.btView setHidden:YES];
+    NSLog(@"%@", self.btTextField.text);
+    [[DataCenter sharedData] addMissionListWithMissionName:self.btTextField.text];
+    
+    self.btTextField.text = @"";
+    
+    [self.btTextField resignFirstResponder];
+    [self.myTableView reloadData];
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
+- (void)didTagBtnSetting {
+    [self.myTableView reloadData];
+}
+
+
+// TagAlertView 
+- (IBAction)showTagAlertView:(id)sender {
+    [self willTagAlertView];
+}
+
+- (void)willTagAlertView {
+    TagAlertViewController *tagAlertVC = [self.storyboard instantiateViewControllerWithIdentifier:@"TagAlertViewController"];
+    
+    [self addChildViewController:tagAlertVC];
+    tagAlertVC.view.frame = self.view.frame;
+    tagAlertVC.delegate = self;
+    
+    [self.view addSubview:tagAlertVC.view];
+}
+
+
+// MissionView
+- (IBAction)showMissionView:(id)sender {
+    
+    NSInteger random = arc4random() % [DataCenter sharedData].realMissionList.count;
+    
+    [DataCenter sharedData].currentMission = [DataCenter sharedData].realMissionList[random];
+
+    MissionViewController *missionVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MissionViewController"];
+    [self presentViewController:missionVC animated:YES completion:nil];
+}
 
 @end

@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  TableViewCell.h
 //  0308 CoupleMission
 //
 //  Created by katniss on 2017. 3. 8..
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface TableViewCell : UITableViewCell
 
-@property (strong, nonatomic) UIWindow *window;
-
+@property (weak, nonatomic) IBOutlet UILabel *missionLable;
 
 @end
-

@@ -20,8 +20,7 @@
     // Override point for customization after application launch.
     
 //    [[DataCenter sharedData] addMissionListWithMissionName:@"테스트"];
-    NSLog(@"%@", [DataCenter sharedData].missionList);
-    
+//    NSLog(@"%@", [DataCenter sharedData].missionList);
     
     return YES;
 }

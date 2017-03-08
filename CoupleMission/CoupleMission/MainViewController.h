@@ -1,15 +1,18 @@
 //
 //  ViewController.h
-//  CoupleMission
+//  0308 CoupleMission
 //
-//  Created by Jeheon Choi on 2017. 3. 8..
-//  Copyright © 2017년 JeheonChoi. All rights reserved.
+//  Created by katniss on 2017. 3. 8..
+//  Copyright © 2017년 katniss. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *myProfileImg;
+@property (weak, nonatomic) IBOutlet UIImageView *connectImg;
+@property (weak, nonatomic) IBOutlet UIImageView *yourProfileImg;
 
 @end
 

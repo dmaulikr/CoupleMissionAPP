@@ -8,14 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AlertViewController : UIViewController
+@interface MissionViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIImageView *alertImg;
 @property (weak, nonatomic) IBOutlet UIImageView *backImg;
 @property (weak, nonatomic) IBOutlet UILabel *missionText;
 @property (weak, nonatomic) IBOutlet UIView *missionLine;
 @property (weak, nonatomic) IBOutlet UILabel *timeLable;
-
-
-
 
 @end
