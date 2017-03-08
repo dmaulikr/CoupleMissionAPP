@@ -12,9 +12,9 @@
 
 <br>
 ##Team Members
-**"김예주"  devssgg@gmail.com**
+**"김예주"  kimyejoo1211@gmail.com**
 <br>
-**"최제헌" c92921@hanmail.net**
+**"최제헌" c92921@gmail.com**
 <br>
 **"여상민" devssgg@gmail.com**
 <br>
