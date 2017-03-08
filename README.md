@@ -1,2 +1,4 @@
-# CoupleMissionAPP
-2017.03.08 iOS School X UX/UI School Hackathon
+# Couple Mission APP
+**2017.03.08**  
+**FastCampus Hackathon**  
+**iOS School X UX/UI School**  
