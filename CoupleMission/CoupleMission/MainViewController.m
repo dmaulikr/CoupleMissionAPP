@@ -48,18 +48,18 @@
     
     
     //profile img 넣기
-    self.myProfileImg.image = [UIImage imageNamed:@"p1.png"];
+    self.myProfileImg.image = [UIImage imageNamed:@"bitmap2.png"];
     
-    self.connectImg.image = [UIImage imageNamed:@"connect.png"];
+    self.connectImg.image = [UIImage imageNamed:@"like.png"];
     
-    self.yourProfileImg.image = [UIImage imageNamed:@"p2.png"];
+    self.yourProfileImg.image = [UIImage imageNamed:@"bitmap.png"];
     
     
     //bound
-    self.myProfileImg.layer.cornerRadius = 45;
+    self.myProfileImg.layer.cornerRadius = 32;
     self.myProfileImg.layer.masksToBounds = YES;
     
-    self.yourProfileImg.layer.cornerRadius = 45;
+    self.yourProfileImg.layer.cornerRadius = 32;
     self.yourProfileImg.layer.masksToBounds = YES;
     
     
@@ -117,6 +117,8 @@
 
 - (IBAction)addBtnClick:(id)sender {
     
+    [self.btTextField becomeFirstResponder];
+    
     self.btView.center = CGPointMake(self.view.center.x, self.view.frame.size.height + self.btView.frame.size.height/2);
     
     [self.btView setHidden:NO];
@@ -173,9 +175,18 @@
 // MissionView
 - (IBAction)showMissionView:(id)sender {
     
-    NSInteger random = arc4random() % [DataCenter sharedData].realMissionList.count;
+    NSLog(@"realMissionList : %@", [DataCenter sharedData].realMissionList);
     
-    [DataCenter sharedData].currentMission = [DataCenter sharedData].realMissionList[random];
+    if (![DataCenter sharedData].realMissionList.count) {
+        // 예외처리 문제있음.
+        [[DataCenter sharedData].currentMission setObject:@"미션이 없습니다." forKey:@"Name"];
+        
+        NSLog(@"%@", [DataCenter sharedData].currentMission);
+    } else {
+        NSInteger random = arc4random() % [DataCenter sharedData].realMissionList.count;
+        
+        [DataCenter sharedData].currentMission = [DataCenter sharedData].realMissionList[random];
+    }
 
     MissionViewController *missionVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MissionViewController"];
     [self presentViewController:missionVC animated:YES completion:nil];

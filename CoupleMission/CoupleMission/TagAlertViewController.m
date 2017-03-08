@@ -8,6 +8,7 @@
 
 #import "TagAlertViewController.h"
 #import "DataCenter.h"
+#import "UIColor+PRJAdditions.h"
 
 @interface TagAlertViewController ()
 
@@ -18,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.doneBtn setTitleColor:[UIColor prj_pinkColor] forState:UIControlStateNormal];
+    [self.doneBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
+    [self.doneBtn.layer setBorderColor:[UIColor prj_pinkColor].CGColor];
+    [self.doneBtn.layer setCornerRadius:25];
+    [self.doneBtn.layer setBorderWidth:2];
     
     self.view.backgroundColor = [UIColor clearColor];
 //    self.view.alpha = 0.5;

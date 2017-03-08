@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.alertImg.image = [UIImage imageNamed:@"p2.png"];
+    self.alertImg.image = [UIImage imageNamed:@"bitmap2.png"];
     self.backImg.image = [UIImage imageNamed:@"d10.png"];
     
     self.alertImg.layer.cornerRadius = 45;

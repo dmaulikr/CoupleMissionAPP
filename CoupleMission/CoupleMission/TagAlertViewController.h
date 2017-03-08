@@ -20,4 +20,6 @@
 
 @property (nonatomic, weak) id <TagAlertViewControllerDelegate> delegate;
 
+@property (weak, nonatomic) IBOutlet UIButton *doneBtn;
+
 @end
