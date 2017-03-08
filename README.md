@@ -1,5 +1,5 @@
 # Couple Mission APP
-#"Ping Pong"
+##"Ping Pong"
 ######"사랑의 커플 미션 앱 :)"
 
 
@@ -32,7 +32,7 @@
 
 ##UI
 
-### * pingpong로고
+#### * pingpong로고
 
 
 ![logo.png](./img/logo.png)
@@ -40,19 +40,16 @@
 
 
 
+#### * 미션 목록 태그뷰
 
 
-### * 태그뷰
-
-
-![11.png](./img/11.png)
-
+![tag.png](./img/tag.png)
 
 
 
 
 
-### * 리스트뷰
+#### * 리스트뷰
 
 
 ![list.png](./img/list.png)
@@ -62,10 +59,12 @@
 
 
 
-### * 당신의 미션 뷰
+
+#### * 당신의 미션 성공 뷰
 
 
-![mission.png](./img/mission.png)
+![success.png](./img/success.png)
+
 
 
 
