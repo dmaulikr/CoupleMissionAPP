@@ -1,9 +1,9 @@
 //
 //  main.m
-//  Hackerthon
+//  Test01
 //
-//  Created by SSangGA on 2017. 3. 8..
-//  Copyright © 2017년 ysm. All rights reserved.
+//  Created by abyssinaong on 2017. 3. 2..
+//  Copyright © 2017년 KimYunseo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
