@@ -1,9 +1,9 @@
 # Couple Mission APP
-##"Ping Pong"
+#"Ping Pong"
+######"사랑의 커플 미션 앱 :)"
 
-######"사랑의 커플 미션 앱 :) "
 
-
+<br>
 **2017.03.08 ~ 09**  
 **FastCampus Hackathon**  
 **iOS School X UX/UI School**  
@@ -32,34 +32,41 @@
 
 ##UI
 
-###pingpong로고
-
-![logo](/Users/katniss/Desktop/logo.png)
+### * pingpong로고
 
 
-
-
-
-###태그뷰
-
-
-![11](/Users/katniss/Desktop/11.png)
-
-
-
-
-###리스트뷰
-
-
-![list](/Users/katniss/Desktop/list.png)
+![logo.png](./img/logo.png)
 
 
 
 
 
-###당신의 미션 뷰
 
-![mission](/Users/katniss/Desktop/mission.png)
+### * 태그뷰
+
+
+![11.png](./img/11.png)
+
+
+
+
+
+
+### * 리스트뷰
+
+
+![list.png](./img/list.png)
+
+
+
+
+
+
+### * 당신의 미션 뷰
+
+
+![mission.png](./img/mission.png)
+
 
 
 
