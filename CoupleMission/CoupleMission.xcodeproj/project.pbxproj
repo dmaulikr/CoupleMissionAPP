@@ -56,6 +56,7 @@
 		3FBAB6401E70C42100103591 /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBAB63E1E70C42100103591 /* bell.png */; };
 		3FBAB6411E70C42100103591 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBAB63F1E70C42100103591 /* add.png */; };
 		3FBAB6431E70C77900103591 /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBAB6421E70C77900103591 /* LaunchScreen.png */; };
+		3FF435271E72F53700419B89 /* UIFont+PRJAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF435261E72F53700419B89 /* UIFont+PRJAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,8 @@
 		3FBAB63E1E70C42100103591 /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bell.png; path = images/bell.png; sourceTree = "<group>"; };
 		3FBAB63F1E70C42100103591 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add.png; path = images/add.png; sourceTree = "<group>"; };
 		3FBAB6421E70C77900103591 /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchScreen.png; path = images/LaunchScreen.png; sourceTree = "<group>"; };
+		3FF435251E72F53700419B89 /* UIFont+PRJAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+PRJAdditions.h"; sourceTree = "<group>"; };
+		3FF435261E72F53700419B89 /* UIFont+PRJAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+PRJAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,16 +152,15 @@
 		3F22DF781E7029C3002B8841 /* CoupleMission */ = {
 			isa = PBXGroup;
 			children = (
-				3FBAB5FD1E70BA3B00103591 /* UIColor+PRJAdditions.h */,
-				3FBAB5FE1E70BA3B00103591 /* UIColor+PRJAdditions.m */,
+				3FF435281E72F53F00419B89 /* Styleguide */,
 				3F22DF7C1E7029C3002B8841 /* AppDelegate.h */,
 				3F22DF7D1E7029C3002B8841 /* AppDelegate.m */,
-				3F22DF931E707C9B002B8841 /* images */,
+				3F22DF821E7029C3002B8841 /* Main.storyboard */,
 				3F22DFB11E7080D9002B8841 /* Data */,
 				3F22DFAE1E708080002B8841 /* MainView */,
 				3F22DFB01E7080C0002B8841 /* TagAlertView */,
 				3F22DFAF1E7080A4002B8841 /* MissionView */,
-				3F22DF821E7029C3002B8841 /* Main.storyboard */,
+				3F22DF931E707C9B002B8841 /* images */,
 				3F22DF851E7029C3002B8841 /* Assets.xcassets */,
 				3F22DF871E7029C3002B8841 /* LaunchScreen.storyboard */,
 				3F22DF8A1E7029C3002B8841 /* Info.plist */,
@@ -256,6 +258,17 @@
 				3F22DF911E7039CB002B8841 /* DataCenter.m */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		3FF435281E72F53F00419B89 /* Styleguide */ = {
+			isa = PBXGroup;
+			children = (
+				3FF435251E72F53700419B89 /* UIFont+PRJAdditions.h */,
+				3FF435261E72F53700419B89 /* UIFont+PRJAdditions.m */,
+				3FBAB5FD1E70BA3B00103591 /* UIColor+PRJAdditions.h */,
+				3FBAB5FE1E70BA3B00103591 /* UIColor+PRJAdditions.m */,
+			);
+			name = Styleguide;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +389,7 @@
 				3F22DFA71E707DCE002B8841 /* MissionViewController.m in Sources */,
 				3F22DFAD1E707F15002B8841 /* TagAlertViewController.m in Sources */,
 				3F22DF7B1E7029C3002B8841 /* main.m in Sources */,
+				3FF435271E72F53700419B89 /* UIFont+PRJAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
