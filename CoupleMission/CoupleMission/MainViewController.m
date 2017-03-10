@@ -11,6 +11,7 @@
 #import "DataCenter.h"
 #import "TagAlertViewController.h"
 #import "MissionViewController.h"
+#import "UIColor+PRJAdditions.h"
 
 
 @interface MainViewController ()
@@ -22,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIView *btView;
 @property (weak, nonatomic) IBOutlet UITextField *btTextField;
 @property (weak, nonatomic) IBOutlet UIButton *btDone;
+@property (weak, nonatomic) IBOutlet UIButton *missionSendBtn;
 
 @end
 
@@ -31,6 +33,15 @@
     [super viewDidLoad];
     
     NSLog(@"시작");
+    
+    
+    // missionSendBtn 세팅
+    [self.missionSendBtn setTitleColor:[UIColor prj_pinkColor] forState:UIControlStateNormal];
+    [self.missionSendBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
+    [self.missionSendBtn.layer setBorderColor:[UIColor prj_pinkColor].CGColor];
+    [self.missionSendBtn.layer setCornerRadius:self.missionSendBtn.frame.size.height/2];
+    [self.missionSendBtn.layer setBorderWidth:2];
+    
 
     // TagAlertView
     [self willTagAlertView];

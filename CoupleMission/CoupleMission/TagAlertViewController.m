@@ -23,7 +23,7 @@
     [self.doneBtn setTitleColor:[UIColor prj_pinkColor] forState:UIControlStateNormal];
     [self.doneBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [self.doneBtn.layer setBorderColor:[UIColor prj_pinkColor].CGColor];
-    [self.doneBtn.layer setCornerRadius:25];
+    [self.doneBtn.layer setCornerRadius:self.doneBtn.frame.size.height/2];
     [self.doneBtn.layer setBorderWidth:2];
     
     self.view.backgroundColor = [UIColor clearColor];
@@ -62,10 +62,10 @@
         }
         
 
-        btn.frame = CGRectMake(offsetX, offsetY, btnWidth, 30);
+        btn.frame = CGRectMake(offsetX, offsetY, btnWidth, 38);
         btn.tag = i;
         [btn addTarget:self action:@selector(selectedTagBtn:) forControlEvents:UIControlEventTouchUpInside];
-        btn.layer.cornerRadius = 15;
+        btn.layer.cornerRadius = btn.frame.size.height/2;
         
 
         [btn.titleLabel setFont:[UIFont systemFontOfSize:15]];

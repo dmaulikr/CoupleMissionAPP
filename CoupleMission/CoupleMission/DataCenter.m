@@ -74,6 +74,21 @@
                         @"같이 운동하기",     // HEALTH
                         @"셀카찍기",    // SELFIE
                         @"운동하기",    // EXERCISE
+                        
+                        @"고양이 카페가기", // CATCAFE
+                        @"뽀뽀해주기",   // PECK
+                        @"허그하기",    // HUG
+                        @"액션영화 보러가기",   // ACTIONMOVIE
+                        @"이태원가기",       // ITAEWON
+                        @"집청소해주기",      // HOME_CLEANING
+                        @"설거지해주기",      // DISH_WASHING
+                        @"소주마시기",       // SOJU
+                        @"소원들어주기",      // WISH
+                        @"업어주기",        // CARRY_ON_BACK
+                        @"밥사주기",        // BUY_MEAL
+                        @"머리묶어주기",      // TIE_HAIR
+                        @"바라만보기",       // JUST_SEE
+                        @"탁구치기"     // PING_PONG
                         ];
     
     // customMissionArr 초기화

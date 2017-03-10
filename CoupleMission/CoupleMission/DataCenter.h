@@ -63,6 +63,21 @@ typedef NS_ENUM(NSInteger, MissionTag) {
     SELFIE,
     EXERCISE,
     
+    CATCAFE,
+    PECK,
+    HUG,
+    ACTIONMOVIE,
+    ITAEWON,
+    HOME_CLEANING,
+    DISH_WASHING,
+    SOJU,
+    WISH,
+    CARRY_ON_BACK,
+    BUY_MEAL,
+    TIE_HAIR,
+    JUST_SEE,
+    PING_PONG,
+    
     NumOfMissionTag     // 항상 마지막에 둬서, count 갯수 값으로 사용
 };
 
