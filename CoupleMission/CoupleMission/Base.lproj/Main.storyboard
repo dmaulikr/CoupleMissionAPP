@@ -122,7 +122,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4vT-hj-exN" id="0Bm-64-BF8">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="missionList" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6B-lD-NXN">
@@ -272,7 +272,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOc-Ah-x9f">
-                                <rect key="frame" x="160" y="580" width="95" height="41"/>
+                                <rect key="frame" x="159.66666666666666" y="580" width="95" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Xn4-eB-X6X"/>
                                     <constraint firstAttribute="width" constant="95" id="ueF-hd-jQV"/>
@@ -351,7 +351,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남자친구에게 바라는 항목을      선택해주세요" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaw-8g-NyS">
-                                        <rect key="frame" x="67" y="108" width="280" height="64"/>
+                                        <rect key="frame" x="67" y="78.333333333333343" width="280" height="64.000000000000028"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="280" id="Yyx-Ir-clA"/>
                                             <constraint firstAttribute="height" constant="64" id="y54-UD-mxU"/>
@@ -361,7 +361,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KiG-yt-lkJ">
-                                        <rect key="frame" x="0.0" y="180" width="414" height="476"/>
+                                        <rect key="frame" x="0.0" y="164.33333333333331" width="414" height="491.66666666666669"/>
                                     </scrollView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3P-6G-NAa">
                                         <rect key="frame" x="96" y="658" width="198" height="38"/>
@@ -378,13 +378,14 @@
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.96078431372549022" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="f3P-6G-NAa" firstAttribute="leading" secondItem="nUl-Wh-Cz6" secondAttribute="leading" constant="96" id="4rE-ov-9rr"/>
-                                    <constraint firstItem="KiG-yt-lkJ" firstAttribute="centerY" secondItem="nUl-Wh-Cz6" secondAttribute="centerY" multiplier="1.3" constant="-60.400000000000034" id="FDs-9M-no8"/>
                                     <constraint firstItem="KiG-yt-lkJ" firstAttribute="leading" secondItem="nUl-Wh-Cz6" secondAttribute="leading" id="ISV-Wi-nPC"/>
                                     <constraint firstItem="0kB-To-Uqg" firstAttribute="centerX" secondItem="nUl-Wh-Cz6" secondAttribute="centerX" id="KZB-tD-A84"/>
                                     <constraint firstAttribute="bottom" secondItem="KiG-yt-lkJ" secondAttribute="bottom" constant="80" id="Khj-pc-PZ3"/>
                                     <constraint firstItem="xaw-8g-NyS" firstAttribute="centerX" secondItem="nUl-Wh-Cz6" secondAttribute="centerX" id="LeJ-ZL-w3C"/>
+                                    <constraint firstItem="xaw-8g-NyS" firstAttribute="centerY" secondItem="nUl-Wh-Cz6" secondAttribute="centerY" multiplier="0.3" id="SzS-YZ-n9b"/>
                                     <constraint firstAttribute="bottom" secondItem="f3P-6G-NAa" secondAttribute="bottom" constant="40" id="hC3-bJ-Zu9"/>
                                     <constraint firstItem="0kB-To-Uqg" firstAttribute="top" secondItem="nUl-Wh-Cz6" secondAttribute="top" constant="16" id="nK0-k5-hUQ"/>
+                                    <constraint firstItem="KiG-yt-lkJ" firstAttribute="top" secondItem="xaw-8g-NyS" secondAttribute="bottom" constant="22" id="nYq-dA-RHC"/>
                                     <constraint firstAttribute="trailing" secondItem="KiG-yt-lkJ" secondAttribute="trailing" id="t2j-A6-NJL"/>
                                 </constraints>
                             </view>
@@ -395,7 +396,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="nUl-Wh-Cz6" secondAttribute="trailing" constant="-20" id="CyO-12-KML"/>
                             <constraint firstItem="uvB-9m-NxX" firstAttribute="top" secondItem="nUl-Wh-Cz6" secondAttribute="bottom" id="N2I-PS-Le4"/>
                             <constraint firstItem="nUl-Wh-Cz6" firstAttribute="leading" secondItem="Rzc-uN-weI" secondAttribute="leadingMargin" constant="-20" id="hSh-UC-Lxd"/>
-                            <constraint firstItem="xaw-8g-NyS" firstAttribute="top" secondItem="aiT-WY-MmP" secondAttribute="bottom" constant="88" id="pqN-I9-r8P"/>
                         </constraints>
                     </view>
                     <connections>
