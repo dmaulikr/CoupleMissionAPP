@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *missionText;
 @property (weak, nonatomic) IBOutlet UIView *missionLine;
 @property (weak, nonatomic) IBOutlet UILabel *timeLable;
+@property (weak, nonatomic) IBOutlet UIButton *missionDone;
 
 @end

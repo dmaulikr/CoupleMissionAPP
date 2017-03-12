@@ -36,9 +36,12 @@
     
     
     // missionSendBtn 세팅
-    [self.missionSendBtn setTitleColor:[UIColor prj_pinkColor] forState:UIControlStateNormal];
-    [self.missionSendBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
+//    [self.missionSendBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];  // 글자색 수정 by SangMin
+//    [self.missionSendBtn setTitleColor:[UIColor prj_pinkColor] forState:UIControlStateNormal];
+//    [self.missionSendBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
+//    [self.missionSendBtn.titleLabel setTextColor:[UIColor whiteColor]];
     [self.missionSendBtn.layer setBorderColor:[UIColor prj_pinkColor].CGColor];
+    [self.missionSendBtn.layer setBackgroundColor:[UIColor prj_pinkColor].CGColor];
     [self.missionSendBtn.layer setCornerRadius:self.missionSendBtn.frame.size.height/2];
     [self.missionSendBtn.layer setBorderWidth:2];
     
@@ -50,6 +53,12 @@
     
     // btTextField delegate
     self.btTextField.delegate = self;
+    self.btTextField.borderStyle = UITextBorderStyleNone;
+    self.btTextField.layer.cornerRadius = 0.5;
+    self.btTextField.layer.borderWidth = 2.0;
+    self.btTextField.layer.borderColor = [UIColor prj_beigeColor].CGColor;
+    self.btTextField.layer.shadowOffset = CGSizeMake(0.5, 0.5);
+    
     
     // myTableView delegate
     self.myTableView.delegate = self;
@@ -59,12 +68,11 @@
     
     
     //profile img 넣기
-    self.myProfileImg.image = [UIImage imageNamed:@"bitmap2.png"];
+ /*   self.myProfileImg.image = [UIImage imageNamed:@"bitmap2.png"];
     
     self.connectImg.image = [UIImage imageNamed:@"like.png"];
     
-    self.yourProfileImg.image = [UIImage imageNamed:@"bitmap.png"];
-    
+    self.yourProfileImg.image = [UIImage imageNamed:@"bitmap.png"]; */ //storyboard에서 이미지 넣는 것으로 수정 by SangMin    
     
     //bound
     self.myProfileImg.layer.cornerRadius = 32;
@@ -131,6 +139,7 @@
     [self.btTextField becomeFirstResponder];
     
     self.btView.center = CGPointMake(self.view.center.x, self.view.frame.size.height + self.btView.frame.size.height/2);
+//    self.btView.center = CGPointMake(self.myTableView.center.x,  self.myTableView.frame.size.height/2);
     
     [self.btView setHidden:NO];
     
