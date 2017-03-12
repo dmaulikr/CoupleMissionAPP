@@ -88,8 +88,9 @@
     [self getInfoData];
     
     if (_currentReceivedMission == nil) {   // 앱 최초 실행시만 들어감
-        _didReceivedMissionDone = YES;  // 초기값 YES
         _currentReceivedMission = @"";  // 초기화
+        _didSendedMissionDone = YES;    // 초기값 YES
+        _didReceivedMissionDone = YES;  // 초기값 YES
     }
 }
 
@@ -124,7 +125,8 @@
 
 // UserDefaults에 저장
 - (void)saveInfoData {
-    
+        
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:_didSendedMissionDone] forKey:@"didSendedMissionDone"];
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:_didReceivedMissionDone] forKey:@"didReceivedMissionDone"];
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:_currentSendedMissionIndex] forKey:@"currentSendedMissionIndex"];
     [[NSUserDefaults standardUserDefaults] setObject:_currentReceivedMission forKey:@"currentReceivedMission"];
@@ -139,7 +141,7 @@
 
 // UserDefaults에서 불러오기
 - (void)getInfoData {
-    
+    _didSendedMissionDone = [[[NSUserDefaults standardUserDefaults] objectForKey:@"didSendedMissionDone"] boolValue];
     _didReceivedMissionDone = [[[NSUserDefaults standardUserDefaults] objectForKey:@"didReceivedMissionDone"] boolValue];
     _currentSendedMissionIndex = [[[NSUserDefaults standardUserDefaults] objectForKey:@"currentSendedMissionIndex"] integerValue];
     _currentReceivedMission = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentReceivedMission"];
@@ -195,6 +197,7 @@
 - (void)sendMissionWithIndex:(NSInteger)missionListIndex {
     
     _currentSendedMissionIndex = missionListIndex;
+    _didSendedMissionDone = NO;
     [self.delegate hasSendedMission:YES];
     
     // 미션 대상에게 보내는 부분 추가해야함     // 일단 네트웍 없으니, 내 미션으로 받음
@@ -216,6 +219,7 @@
     // 완료됐음을 상대방에게 보냄       // 일단 네트웍 없으니, 혼자 보낸 미션 끝났다고 알림
 
     [self deleteMissionWithMissionListIndex:_currentSendedMissionIndex];
+    _didSendedMissionDone = YES;
     [self.delegate hasSendedMission:NO];
 }
 

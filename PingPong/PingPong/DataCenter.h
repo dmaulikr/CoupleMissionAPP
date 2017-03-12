@@ -70,6 +70,7 @@
 
 // 미션 완료
 - (void)completeMission;
+@property (nonatomic, readonly) BOOL didSendedMissionDone;
 @property (nonatomic, readonly) BOOL didReceivedMissionDone;
 
 // 미션 타이머

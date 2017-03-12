@@ -69,8 +69,8 @@
     [self.missionAddBtn setEnabled:NO];     // 초기 missionAddBtn tf nil이기에 사용불가
     
     
-    
-    [self hasReceivedMission:![DataCenter sharedData].didReceivedMissionDone];
+    [self hasSendedMission:![DataCenter sharedData].didReceivedMissionDone];    // 보낸 미션 상태 동기화
+    [self hasReceivedMission:![DataCenter sharedData].didReceivedMissionDone];  // 받은 미션 상태 동기화
     
 }
 
