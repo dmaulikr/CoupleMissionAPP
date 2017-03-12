@@ -49,4 +49,8 @@
 	return [UIColor colorWithRed:255.0f / 255.0f green:112.0f / 255.0f blue:105.0f / 255.0f alpha:1.0f];
 }
 
++ (UIColor *)prj_pinkishGrey {
+    return [UIColor colorWithRed:200.0f / 255.0f green:200.0f / 255.0f blue:200.0f / 255.0f alpha:1.0f];
+}
+
 @end

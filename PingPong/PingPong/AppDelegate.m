@@ -19,19 +19,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    
-//    NSLog(@"1111");
-//    for (NSString *str in [DataCenter sharedData].missionList) {
-//        NSLog(@"%@", str);
-//    }
-//    
-//    [[DataCenter sharedData] deleteMissionByMissionTag:6];
-//    
-//    [[DataCenter sharedData] deleteMissionWithMissionText:@"허그하기"];
-//
-//    
-//    NSLog(@"2222");
-//
+    [[[UIApplication sharedApplication] valueForKey:@"statusBar"] setValue:[UIColor prj_salmonColor] forKey:@"foregroundColor"];    // 상태바 색상 변경
+    
     for (NSString *str in [DataCenter sharedData].missionList) {
         NSLog(@"%@", str);
     }
@@ -66,8 +55,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 
-    // 앱 종료 전, Document plist에 저장
-    [[DataCenter sharedData] setDocuPlistByMissionList];
+    // 앱 종료 전
+    // MissionLists Document plist에 저장
+    [[DataCenter sharedData] saveDocuPlistByMissionList];
+    [[DataCenter sharedData] saveInfoData];
 }
 
 

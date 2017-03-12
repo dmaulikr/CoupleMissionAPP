@@ -21,11 +21,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="3fM-i2-L4y">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3fM-i2-L4y">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moT-fy-mLL">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="332.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="Mus-aq-1rz">
                                                 <rect key="frame" x="292" y="0.0" width="60" height="92"/>
@@ -51,17 +51,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2y-nV-HHM">
-                                        <rect key="frame" x="0.0" y="335" width="375" height="332"/>
+                                        <rect key="frame" x="0.0" y="334.5" width="375" height="332.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woman" translatesAutoresizingMaskIntoConstraints="NO" id="lOk-jg-UGR">
-                                                <rect key="frame" x="23" y="231" width="60" height="101"/>
+                                                <rect key="frame" x="23" y="231.5" width="60" height="101"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="mnJ-A5-cxh"/>
                                                     <constraint firstAttribute="height" constant="101" id="noT-qI-gyQ"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart1" translatesAutoresizingMaskIntoConstraints="NO" id="a0L-a4-IOZ">
-                                                <rect key="frame" x="33.5" y="173" width="39" height="34"/>
+                                                <rect key="frame" x="33.5" y="173.5" width="39" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="Gfy-OK-xMn"/>
                                                     <constraint firstAttribute="width" constant="39" id="cKg-9c-D5Z"/>

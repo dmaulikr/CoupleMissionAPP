@@ -19,5 +19,6 @@
 + (UIColor *)prj_greyishBrownTwoColor;
 + (UIColor *)prj_veryLightPinkTwoColor;
 + (UIColor *)prj_salmonColor;
++ (UIColor *)prj_pinkishGrey;
 
 @end

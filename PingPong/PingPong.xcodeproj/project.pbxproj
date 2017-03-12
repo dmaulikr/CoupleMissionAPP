@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F9CB3BB1E7451A0001360FB /* MissionTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB3BA1E7451A0001360FB /* MissionTagViewController.m */; };
+		3F9CB3BD1E745737001360FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CB3BC1E745737001360FB /* Main.storyboard */; };
+		3FE8F6511E754F3B00F705E1 /* MissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8F6501E754F3B00F705E1 /* MissionViewController.m */; };
 		3FF4353A1E72F86800419B89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF435391E72F86800419B89 /* main.m */; };
 		3FF4353D1E72F86800419B89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4353C1E72F86800419B89 /* AppDelegate.m */; };
-		3FF435431E72F86800419B89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF435411E72F86800419B89 /* Main.storyboard */; };
 		3FF435451E72F86800419B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF435441E72F86800419B89 /* Assets.xcassets */; };
 		3FF435481E72F86800419B89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF435461E72F86800419B89 /* LaunchScreen.storyboard */; };
 		3FF435511E72F8DC00419B89 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF435501E72F8DC00419B89 /* DataCenter.m */; };
@@ -20,11 +22,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F9CB3B91E7451A0001360FB /* MissionTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissionTagViewController.h; sourceTree = "<group>"; };
+		3F9CB3BA1E7451A0001360FB /* MissionTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissionTagViewController.m; sourceTree = "<group>"; };
+		3F9CB3BC1E745737001360FB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3FE8F64F1E754F3B00F705E1 /* MissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissionViewController.h; sourceTree = "<group>"; };
+		3FE8F6501E754F3B00F705E1 /* MissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissionViewController.m; sourceTree = "<group>"; };
 		3FF435351E72F86800419B89 /* PingPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF435391E72F86800419B89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FF4353B1E72F86800419B89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FF4353C1E72F86800419B89 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3FF435421E72F86800419B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FF435441E72F86800419B89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FF435471E72F86800419B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FF435491E72F86800419B89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +56,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FE8F64B1E7545BC00F705E1 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				3FF4355A1E72F93500419B89 /* MainViewController.h */,
+				3FF4355B1E72F93500419B89 /* MainViewController.m */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		3FE8F64C1E7545CB00F705E1 /* MissionTagView */ = {
+			isa = PBXGroup;
+			children = (
+				3F9CB3B91E7451A0001360FB /* MissionTagViewController.h */,
+				3F9CB3BA1E7451A0001360FB /* MissionTagViewController.m */,
+			);
+			name = MissionTagView;
+			sourceTree = "<group>";
+		};
+		3FE8F64D1E75460D00F705E1 /* APPFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				3FF4353B1E72F86800419B89 /* AppDelegate.h */,
+				3FF4353C1E72F86800419B89 /* AppDelegate.m */,
+				3F9CB3BC1E745737001360FB /* Main.storyboard */,
+				3FF435461E72F86800419B89 /* LaunchScreen.storyboard */,
+				3FF435491E72F86800419B89 /* Info.plist */,
+			);
+			name = APPFoundation;
+			sourceTree = "<group>";
+		};
+		3FE8F64E1E754F2300F705E1 /* MissionView */ = {
+			isa = PBXGroup;
+			children = (
+				3FE8F64F1E754F3B00F705E1 /* MissionViewController.h */,
+				3FE8F6501E754F3B00F705E1 /* MissionViewController.m */,
+			);
+			name = MissionView;
+			sourceTree = "<group>";
+		};
 		3FF4352C1E72F86800419B89 = {
 			isa = PBXGroup;
 			children = (
@@ -69,17 +114,12 @@
 		3FF435371E72F86800419B89 /* PingPong */ = {
 			isa = PBXGroup;
 			children = (
+				3FE8F64D1E75460D00F705E1 /* APPFoundation */,
 				3FF435581E72F8E900419B89 /* Styleguide */,
-				3FF435611E72FF7000419B89 /* InitialMissionList.plist */,
-				3FF4353B1E72F86800419B89 /* AppDelegate.h */,
-				3FF4353C1E72F86800419B89 /* AppDelegate.m */,
 				3FF435591E72F8F900419B89 /* Data */,
-				3FF4355A1E72F93500419B89 /* MainViewController.h */,
-				3FF4355B1E72F93500419B89 /* MainViewController.m */,
-				3FF435411E72F86800419B89 /* Main.storyboard */,
-				3FF435441E72F86800419B89 /* Assets.xcassets */,
-				3FF435461E72F86800419B89 /* LaunchScreen.storyboard */,
-				3FF435491E72F86800419B89 /* Info.plist */,
+				3FE8F64B1E7545BC00F705E1 /* MainView */,
+				3FE8F64C1E7545CB00F705E1 /* MissionTagView */,
+				3FE8F64E1E754F2300F705E1 /* MissionView */,
 				3FF435381E72F86800419B89 /* Supporting Files */,
 			);
 			path = PingPong;
@@ -107,6 +147,8 @@
 		3FF435591E72F8F900419B89 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3FF435441E72F86800419B89 /* Assets.xcassets */,
+				3FF435611E72FF7000419B89 /* InitialMissionList.plist */,
 				3FF4354F1E72F8DC00419B89 /* DataCenter.h */,
 				3FF435501E72F8DC00419B89 /* DataCenter.m */,
 			);
@@ -175,7 +217,7 @@
 				3FF435481E72F86800419B89 /* LaunchScreen.storyboard in Resources */,
 				3FF435451E72F86800419B89 /* Assets.xcassets in Resources */,
 				3FF435621E72FF7000419B89 /* InitialMissionList.plist in Resources */,
-				3FF435431E72F86800419B89 /* Main.storyboard in Resources */,
+				3F9CB3BD1E745737001360FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,23 +231,17 @@
 				3FF4353D1E72F86800419B89 /* AppDelegate.m in Sources */,
 				3FF435511E72F8DC00419B89 /* DataCenter.m in Sources */,
 				3FF435561E72F8E400419B89 /* UIFont+PRJAdditions.m in Sources */,
+				3FE8F6511E754F3B00F705E1 /* MissionViewController.m in Sources */,
 				3FF4355C1E72F93500419B89 /* MainViewController.m in Sources */,
 				3FF435571E72F8E400419B89 /* UIColor+PRJAdditions.m in Sources */,
 				3FF4353A1E72F86800419B89 /* main.m in Sources */,
+				3F9CB3BB1E7451A0001360FB /* MissionTagViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3FF435411E72F86800419B89 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FF435421E72F86800419B89 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3FF435461E72F86800419B89 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -348,6 +384,7 @@
 				3FF4354E1E72F86800419B89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
