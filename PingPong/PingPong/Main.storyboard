@@ -171,7 +171,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U7F-8o-gJS" id="NyU-za-Vwe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -255,6 +255,98 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wrI-4V-H0O">
+            <objects>
+                <viewController id="uZY-KR-A8Q" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dht-d0-hK6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hgc-0C-mBX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yO5-pG-SnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yf0-11-DyU">
+                                <rect key="frame" x="19" y="367" width="375" height="369"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="woman" translatesAutoresizingMaskIntoConstraints="NO" id="Y9P-sm-85B">
+                                        <rect key="frame" x="23" y="231.5" width="60" height="101"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="BtN-Y6-dHz"/>
+                                            <constraint firstAttribute="height" constant="101" id="N3M-vu-3tc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="heart1" translatesAutoresizingMaskIntoConstraints="NO" id="azC-tO-Qec">
+                                        <rect key="frame" x="33.5" y="173.5" width="39" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="Chn-P1-mbe"/>
+                                            <constraint firstAttribute="width" constant="39" id="Z3n-jl-egc"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.89765435459999998" blue="0.89663749930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="azC-tO-Qec" firstAttribute="centerX" secondItem="Y9P-sm-85B" secondAttribute="centerX" id="9iE-mX-tYO"/>
+                                    <constraint firstItem="Y9P-sm-85B" firstAttribute="leading" secondItem="yf0-11-DyU" secondAttribute="leading" constant="23" id="G7a-6X-sZx"/>
+                                    <constraint firstItem="Y9P-sm-85B" firstAttribute="top" secondItem="azC-tO-Qec" secondAttribute="bottom" constant="24" id="qFy-Bh-ii9"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y9P-sm-85B" secondAttribute="bottom" id="sn9-Z0-IJU"/>
+                                </constraints>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="Gke-2x-LeG">
+                                <rect key="frame" x="188" y="679" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.69404077529907227" green="0.69416195154190063" blue="0.69403314590454102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.4308942556" blue="0.43099984530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CSX-aP-nAn">
+                                <rect key="frame" x="19" y="0.0" width="375" height="332.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="tZE-Y2-uG8">
+                                        <rect key="frame" x="292" y="0.0" width="60" height="92"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="LW3-Uo-2hf"/>
+                                            <constraint firstAttribute="height" constant="92" id="Lr7-fs-AkM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="heart2" translatesAutoresizingMaskIntoConstraints="NO" id="d0i-wj-RGT">
+                                        <rect key="frame" x="303" y="126" width="39" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="39" id="DsT-fB-HPu"/>
+                                            <constraint firstAttribute="height" constant="34" id="XxC-Tv-xSw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="그가 원하는게 무엇인지 모르겠나요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mas-l4-0dF">
+                                        <rect key="frame" x="55" y="168" width="264" height="107"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8199685216" green="0.94152313470000004" blue="0.95048564670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="d0i-wj-RGT" firstAttribute="centerX" secondItem="tZE-Y2-uG8" secondAttribute="centerX" id="MJ1-qR-sgJ"/>
+                                    <constraint firstItem="tZE-Y2-uG8" firstAttribute="top" secondItem="CSX-aP-nAn" secondAttribute="top" id="NOJ-fR-KU3"/>
+                                    <constraint firstItem="d0i-wj-RGT" firstAttribute="top" secondItem="tZE-Y2-uG8" secondAttribute="bottom" constant="34" id="SDP-fo-KEF"/>
+                                    <constraint firstAttribute="trailing" secondItem="tZE-Y2-uG8" secondAttribute="trailing" constant="23" id="axL-0h-lbu"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pingPong" translatesAutoresizingMaskIntoConstraints="NO" id="Jbi-9M-EdO">
+                                <rect key="frame" x="121" y="318" width="172" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="3HI-ma-hY1"/>
+                                    <constraint firstAttribute="width" constant="172" id="UbG-kN-XmE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qEh-pa-qhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="720.6521739130435"/>
         </scene>
         <!--Mission Tag View Controller-->
         <scene sceneID="2xU-UV-x0N">
@@ -536,13 +628,18 @@
         <image name="caretDown" width="17" height="12"/>
         <image name="clock" width="29" height="29"/>
         <image name="complete" width="166" height="168"/>
+        <image name="heart1" width="39" height="34"/>
+        <image name="heart2" width="39" height="34"/>
         <image name="leejongsuk" width="64" height="64"/>
         <image name="like" width="36" height="32"/>
+        <image name="man" width="60" height="92"/>
         <image name="missionBackImg" width="246" height="168"/>
         <image name="missionTextField" width="363" height="64"/>
+        <image name="pingPong" width="166" height="48"/>
         <image name="quotationMarks" width="24" height="20"/>
         <image name="suzy" width="64" height="64"/>
         <image name="talkballoon" width="355" height="339"/>
+        <image name="woman" width="60" height="101"/>
         <image name="x" width="18" height="19"/>
     </resources>
 </document>

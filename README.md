@@ -8,7 +8,7 @@
 **FastCampus Hackathon**  
 **iOS School X UX/UI School**  
 
-**마지막 프로젝트:** [PingPong](https://github.com/Jeheonjeol/CoupleMissionAPP/tree/master/PingPong)
+
 
 <br>
 ##Team Members
@@ -34,41 +34,36 @@
 
 #### * pingpong로고
 
-
-![logo.png](./img/logo.png)
-
+<img src="./img/logo.png?raw=true" width="250">
 
 
 
 #### * 미션 목록 태그뷰
 
-
-![tag.png](./img/tag.png)
-
+<img src="./img/tag.png?raw=true" width="250">
 
 
 
 
 #### * 리스트뷰
 
-
-![list.png](./img/list.png)
-
-
-
+<img src="./img/list.png?raw=true" width="250">
 
 
 
 
 #### * 당신의 미션 성공 뷰
 
-
-![success.png](./img/success.png)
-
+<img src="./img/success.png?raw=true" width="250">
 
 
 
 
+
+## PingPong (ver2)  
+17.03.13 - [PingPong](https://github.com/Jeheonjeol/CoupleMissionAPP/tree/master/PingPong) 
+
+<img src="./img/ezgif.com-video-to-gif.gif?raw=true" width="250">
 
 
 
