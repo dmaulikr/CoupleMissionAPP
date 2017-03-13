@@ -8,7 +8,10 @@
 **FastCampus Hackathon**  
 **iOS School X UX/UI School**  
 
+**17.03.13** : [PingPong](https://github.com/Jeheonjeol/CoupleMissionAPP/tree/master/PingPong) 
 
+<img src="./img/pingpong.gif?raw=true" width="250"> 
+<img src="./img/pingpong2.gif?raw=true" width="250">
 
 <br>
 ##Team Members
@@ -58,12 +61,6 @@
 
 
 
-
-
-## PingPong (ver2)  
-17.03.13 - [PingPong](https://github.com/Jeheonjeol/CoupleMissionAPP/tree/master/PingPong) 
-
-<img src="./img/ezgif.com-video-to-gif.gif?raw=true" width="250">
 
 
 
