@@ -262,6 +262,7 @@
     NSTimeInterval restTime = [self.missionDeadLine timeIntervalSinceNow];
     
     if (restTime > 24*60*60) {      // 타임 초과, 미션 실패
+        _didReceivedMissionDone = YES;
         [self missionTimerStop];
         self.restTimeStr = @"00:00";
         self.percent = 1;
@@ -304,7 +305,7 @@
 
 
 - (void)missionTimerStop {
-    _didReceivedMissionDone = YES;
+    
     self.runingTimer = NO;
     [self.missionTimer invalidate];
     self.missionTimer = nil;
