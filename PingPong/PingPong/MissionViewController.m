@@ -104,6 +104,7 @@
 
 - (IBAction)exitMissionView:(id)sender {
     
+    [[DataCenter sharedData] missionTimerStop];     // 타이머 종료
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

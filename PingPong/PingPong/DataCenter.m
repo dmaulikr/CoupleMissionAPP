@@ -212,6 +212,7 @@
 
 // 미션 완료
 - (void)completeMission {
+    [self missionTimerStop];
     
     _didReceivedMissionDone = YES;
     [self.delegate hasReceivedMission:NO];

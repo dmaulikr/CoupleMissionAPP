@@ -66,7 +66,6 @@
     self.missionTableView.frame = CGRectMake(0, self.view.frame.size.width*176/375 + 20, self.view.frame.size.width, self.view.frame.size.height - (self.view.frame.size.width*176/375 + 20) - 119);
     
     [self.missionTextField addTarget:self action:@selector(editMissionTextField:) forControlEvents:UIControlEventEditingChanged];
-    [self.missionAddBtn setEnabled:NO];     // 초기 missionAddBtn tf nil이기에 사용불가
     
     
     [self hasSendedMission:![DataCenter sharedData].didReceivedMissionDone];    // 보낸 미션 상태 동기화
@@ -134,7 +133,8 @@
     
     if (self.showTextField) {
         [UIView animateWithDuration:0.3 animations:^{
-            [self.missionTextField setText:nil];
+            [self.missionTextField setText:@""];
+            [self.missionAddBtn setEnabled:NO];     // 초기 missionAddBtn tf nil이기에 사용불가
             [self.addCustomMissionBtn setSelected:YES];
             [self.missionTextField becomeFirstResponder];
             
