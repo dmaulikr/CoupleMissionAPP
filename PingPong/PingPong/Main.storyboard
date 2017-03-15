@@ -556,9 +556,9 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:05:05" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejH-6u-eDH" userLabel="timeLabel">
-                                        <rect key="frame" x="125" y="29" width="132" height="38"/>
+                                        <rect key="frame" x="123.66666666666667" y="29" width="135" height="38"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="132" id="8mb-IA-nhv"/>
+                                            <constraint firstAttribute="width" constant="135" id="8mb-IA-nhv"/>
                                             <constraint firstAttribute="height" constant="38" id="NEE-D7-WOB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>

@@ -11,6 +11,12 @@
 #import "UIFont+PRJAdditions.h"
 
 
+
+//------------------ Delegate Protocol ------------------//
+
+
+////////////// DataCenterDelegate //////////////
+
 @protocol DataCenterDelegate <NSObject>
 
 @optional
@@ -20,6 +26,9 @@
 
 
 @end
+
+
+///////////////// TimerDelegate /////////////////
 
 @protocol TimerDelegate <NSObject>
 
@@ -31,6 +40,7 @@
 
 
 
+//--------------------- DataCenter ---------------------//
 
 @interface DataCenter : NSObject
 
@@ -39,11 +49,13 @@
 @property (nonatomic, weak) id <DataCenterDelegate> delegate;
 @property (nonatomic, weak) id <TimerDelegate> timerDelegate;
 
+
+
 /////////////////// 미션 관련 ///////////////////
 
-@property (nonatomic, readonly) NSMutableArray *missionList;   // 추가한 순서대로 NSString 값의 Mission List들이 쌓임
-@property (nonatomic, readonly) NSInteger currentSendedMissionIndex;    // 현재 보내놓은 미션 Index
-@property (nonatomic, readonly) NSString *currentReceivedMission;       // 현재 받은 미션
+@property (nonatomic, readonly) NSMutableArray *missionList;        // 추가한 순서대로 NSString 값의 Mission List들이 쌓임
+@property (nonatomic, readonly) NSString *currentSendedMission;     // 현재 보낸 미션
+@property (nonatomic, readonly) NSString *currentReceivedMission;   // 현재 받은 미션
 
 
 // 미션 태그
@@ -62,7 +74,7 @@
 
 // 데이터 저장
 - (void)saveDocuPlistByMissionList;     // Document plist에 저장
-- (void)saveInfoData;   // UserDefaults에 저장
+- (void)saveInfoData;                   // UserDefaults에 저장
 
 
 // 미션 보내기

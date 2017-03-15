@@ -128,7 +128,7 @@
         
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:_didSendedMissionDone] forKey:@"didSendedMissionDone"];
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:_didReceivedMissionDone] forKey:@"didReceivedMissionDone"];
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:_currentSendedMissionIndex] forKey:@"currentSendedMissionIndex"];
+    [[NSUserDefaults standardUserDefaults] setObject:_currentSendedMission forKey:@"currentSendedMission"];
     [[NSUserDefaults standardUserDefaults] setObject:_currentReceivedMission forKey:@"currentReceivedMission"];
     
     [[NSUserDefaults standardUserDefaults] setObject:self.missionDeadLine forKey:@"missionDeadLine"];
@@ -141,9 +141,9 @@
 
 // UserDefaults에서 불러오기
 - (void)getInfoData {
-    _didSendedMissionDone = [[[NSUserDefaults standardUserDefaults] objectForKey:@"didSendedMissionDone"] boolValue];
+    _didSendedMissionDone   = [[[NSUserDefaults standardUserDefaults] objectForKey:@"didSendedMissionDone"] boolValue];
     _didReceivedMissionDone = [[[NSUserDefaults standardUserDefaults] objectForKey:@"didReceivedMissionDone"] boolValue];
-    _currentSendedMissionIndex = [[[NSUserDefaults standardUserDefaults] objectForKey:@"currentSendedMissionIndex"] integerValue];
+    _currentSendedMission   = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentSendedMission"];
     _currentReceivedMission = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentReceivedMission"];
     
     self.missionDeadLine = [[NSUserDefaults standardUserDefaults] objectForKey:@"missionDeadLine"];
@@ -196,7 +196,7 @@
 // 미션 보내기
 - (void)sendMissionWithIndex:(NSInteger)missionListIndex {
     
-    _currentSendedMissionIndex = missionListIndex;
+    _currentSendedMission = self.missionList[missionListIndex];
     _didSendedMissionDone = NO;
     [self.delegate hasSendedMission:YES];
     
@@ -218,8 +218,10 @@
     [self.delegate hasReceivedMission:NO];
     
     // 완료됐음을 상대방에게 보냄       // 일단 네트웍 없으니, 혼자 보낸 미션 끝났다고 알림
-
-    [self deleteMissionWithMissionListIndex:_currentSendedMissionIndex];
+    if (!self.missionFailed) {
+        // 실패했을 경우 미션리스트에서 삭제하진 않음. 추후, 보낸/받은 미션 따로따로 실패했는지 안했는지 상태값 갖고있는 프로퍼티 필요할 듯
+        [self deleteMissionWithMissionText:_currentSendedMission];
+    }
     _didSendedMissionDone = YES;
     [self.delegate hasSendedMission:NO];
 }
@@ -261,12 +263,11 @@
 
     NSTimeInterval restTime = [self.missionDeadLine timeIntervalSinceNow];
     
-    if (restTime > 24*60*60) {      // 타임 초과, 미션 실패
-        _didReceivedMissionDone = YES;
-        [self missionTimerStop];
-        self.restTimeStr = @"00:00";
+    if (restTime < 0) {      // 타임 초과, 미션 실패
+        self.restTimeStr = @"00:00:00";
         self.percent = 1;
         _missionFailed = YES;
+        [self completeMission];
         
     } else {
         NSInteger hour = (NSInteger)restTime / 3600;
