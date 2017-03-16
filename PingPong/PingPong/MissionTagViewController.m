@@ -146,7 +146,7 @@
     
     }
     
-    [self.scrView setContentSize:CGSizeMake(self.view.frame.size.width-32, offsetY+ 80)];
+    [self.scrView setContentSize:CGSizeMake(self.view.frame.size.width-32, offsetY+100)];
     
 }
 

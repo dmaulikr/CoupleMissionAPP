@@ -248,7 +248,7 @@
                                                            userInfo:@"missionTimer"
                                                             repeats:YES];
         
-        self.runingTimer = YES;  // 종료 후, 다시 App 실행한 상황엔 다시 startedMission = nil이 되어있음
+        self.runingTimer = YES;  // 종료 후, 다시 App 실행한 상황엔 다시 runingTimer = nil이 되어있음
     }
     
     if (self.runingTimer) {

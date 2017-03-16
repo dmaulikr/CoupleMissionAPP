@@ -108,7 +108,7 @@
     return missionCell;
 }
 
-// 이상하게 이렇게 했을때 이상하게 동작함
+// 이상하게 이렇게 했을 때 이상하게 동작함
 //- (IBAction)clickAddCustomMissionBtn:(UIButton *)sender {
 //    
 //    [sender setSelected:!sender.selected];
@@ -213,7 +213,9 @@
 
 }
 
-// tag 세팅 VC에서 Done버튼 눌렀을 떄 불림
+
+// tag 세팅 VC에서 Done버튼 눌렀을 때 불림
+
 - (void)didSelectedDoneBtn {
     [self.missionTagBtn setEnabled:YES]; // 버튼 다시 활성화
 

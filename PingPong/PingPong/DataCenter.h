@@ -52,6 +52,7 @@
 
 
 /////////////////// 미션 관련 ///////////////////
+#pragma mark - 미션관련
 
 @property (nonatomic, readonly) NSMutableArray *missionList;        // 추가한 순서대로 NSString 값의 Mission List들이 쌓임
 @property (nonatomic, readonly) NSString *currentSendedMission;     // 현재 보낸 미션
@@ -71,12 +72,6 @@
 
 - (void)deleteMissionWithMissionListIndex:(NSInteger)missionListIndex;
 
-
-// 데이터 저장
-- (void)saveDocuPlistByMissionList;     // Document plist에 저장
-- (void)saveInfoData;                   // UserDefaults에 저장
-
-
 // 미션 보내기
 - (void)sendMissionWithIndex:(NSInteger)missionListIndex;
 
@@ -85,7 +80,18 @@
 @property (nonatomic, readonly) BOOL didSendedMissionDone;
 @property (nonatomic, readonly) BOOL didReceivedMissionDone;
 
+
+
+// 데이터 저장
+#pragma mark - 데이터 저장
+
+- (void)saveDocuPlistByMissionList;     // Document plist에 저장
+- (void)saveInfoData;                   // UserDefaults에 저장
+
+
 // 미션 타이머
+#pragma mark - 미션 타이머
+
 - (void)missionTimerStart;
 - (void)missionTimerStop;
 
