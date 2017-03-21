@@ -4,24 +4,24 @@
 
 
 <br>
-**2017.03.08 ~ 09**  
-**FastCampus Hackathon**  
-**iOS School X UX/UI School**  
+** 2017.03.08 ~ 09 **  
+** FastCampus Hackathon **  
+** iOS School X UX/UI School **  
 
-**17.03.13** : [PingPong](https://github.com/Jeheonjeol/CoupleMissionAPP/tree/master/PingPong) 
+** 17.03.13 ** : [PingPong](https://github.com/Jeheonjeol/CoupleMissionAPP/tree/master/PingPong) 
 
 <img src="./img/pingpong.gif?raw=true" width="250"> 
 <img src="./img/pingpong2.gif?raw=true" width="250">
 
 <br>
 ## Team Members
-**"김예주"  kimyejoo1211@gmail.com**
+** "김예주"  kimyejoo1211@gmail.com **
 <br>
-**"최제헌" c92921@gmail.com**
+** "최제헌" c92921@gmail.com **
 <br>
-**"여상민" devssgg@gmail.com**
+** "여상민" devssgg@gmail.com **
 <br>
-**"천민정" indie.me.chun@gmail.com**
+** "천민정" indie.me.chun@gmail.com **
 
 <br>
 
