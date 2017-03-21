@@ -3,7 +3,6 @@
 ###### "사랑의 커플 미션 앱 :)"
 
 
-<br>
 #### 2017.03.08 ~ 09  
 #### FastCampus Hackathon   
 #### iOS School X UX/UI School  
