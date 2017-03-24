@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F5074491E84E13A0007DDB3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3F9CB3B91E7451A0001360FB /* MissionTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissionTagViewController.h; sourceTree = "<group>"; };
 		3F9CB3BA1E7451A0001360FB /* MissionTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissionTagViewController.m; sourceTree = "<group>"; };
 		3F9CB3BC1E745737001360FB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +57,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F50744A1E84E25F0007DDB3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3FE8F64B1E7545BC00F705E1 /* MainView */,
+				3FE8F64C1E7545CB00F705E1 /* MissionTagView */,
+				3FE8F64E1E754F2300F705E1 /* MissionView */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		3F50744B1E84E2B10007DDB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3FF435461E72F86800419B89 /* LaunchScreen.storyboard */,
+				3F9CB3BC1E745737001360FB /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		3FE8F64B1E7545BC00F705E1 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,9 +99,6 @@
 			children = (
 				3FF4353B1E72F86800419B89 /* AppDelegate.h */,
 				3FF4353C1E72F86800419B89 /* AppDelegate.m */,
-				3F9CB3BC1E745737001360FB /* Main.storyboard */,
-				3FF435461E72F86800419B89 /* LaunchScreen.storyboard */,
-				3FF435491E72F86800419B89 /* Info.plist */,
 			);
 			name = APPFoundation;
 			sourceTree = "<group>";
@@ -115,11 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				3FE8F64D1E75460D00F705E1 /* APPFoundation */,
-				3FF435581E72F8E900419B89 /* Styleguide */,
 				3FF435591E72F8F900419B89 /* Data */,
-				3FE8F64B1E7545BC00F705E1 /* MainView */,
-				3FE8F64C1E7545CB00F705E1 /* MissionTagView */,
-				3FE8F64E1E754F2300F705E1 /* MissionView */,
+				3F50744A1E84E25F0007DDB3 /* ViewController */,
+				3F50744B1E84E2B10007DDB3 /* View */,
 				3FF435381E72F86800419B89 /* Supporting Files */,
 			);
 			path = PingPong;
@@ -129,6 +144,11 @@
 			isa = PBXGroup;
 			children = (
 				3FF435391E72F86800419B89 /* main.m */,
+				3F5074491E84E13A0007DDB3 /* PrefixHeader.pch */,
+				3FF435491E72F86800419B89 /* Info.plist */,
+				3FF435611E72FF7000419B89 /* InitialMissionList.plist */,
+				3FF435441E72F86800419B89 /* Assets.xcassets */,
+				3FF435581E72F8E900419B89 /* Styleguide */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -147,8 +167,6 @@
 		3FF435591E72F8F900419B89 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				3FF435441E72F86800419B89 /* Assets.xcassets */,
-				3FF435611E72FF7000419B89 /* InitialMissionList.plist */,
 				3FF4354F1E72F8DC00419B89 /* DataCenter.h */,
 				3FF435501E72F8DC00419B89 /* DataCenter.m */,
 			);
@@ -346,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NN7QXHC8A3;
+				GCC_PREFIX_HEADER = PingPong/PrefixHeader.pch;
 				INFOPLIST_FILE = PingPong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Jereator.PingPong;
@@ -358,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NN7QXHC8A3;
+				GCC_PREFIX_HEADER = PingPong/PrefixHeader.pch;
 				INFOPLIST_FILE = PingPong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Jereator.PingPong;
