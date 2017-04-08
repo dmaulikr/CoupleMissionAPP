@@ -31,11 +31,9 @@
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
+
+// 초기 세팅 메서드 ---------------------------------------//
 
 //// Status Bar
 //- (BOOL)prefersStatusBarHidden {
@@ -100,6 +98,7 @@
 }
 
 
+// 다시 MainVC로 나감 ------------------------------------//
 
 - (IBAction)exitMissionView:(id)sender {
     
@@ -107,6 +106,9 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
+
+// 미션 완료 버튼 액션 -------------------------------------//
 
 - (IBAction)missionComplete:(id)sender {
     

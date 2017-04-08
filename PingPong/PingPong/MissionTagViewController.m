@@ -27,12 +27,10 @@
     [self setBtnUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
+
+// 초기 세팅 메서드 ---------------------------------------//
 
 - (void)initialLayoutSetting {
     
@@ -49,7 +47,7 @@
 }
 
 
-// Tag Btnes
+// Tag Btns 세팅
 
 - (void)setBtnUI {
     
@@ -148,6 +146,8 @@
     [self.scrView setContentSize:CGSizeMake(self.view.frame.size.width-32, offsetY+100)];
     
 }
+
+// 태그 버튼 Selector 메서드
 
 - (void)selectedTagBtn:(UIButton *)sender {
 

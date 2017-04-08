@@ -41,18 +41,11 @@
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
-
-/////////////////
+// 초기 세팅 메서드 ---------------------------------------//
 
 - (void)initialSetting {
-    
-    self.view.userInteractionEnabled = YES;     // TextField 외부 터치 이벤트 받기 위한 설정
     
     [DataCenter sharedData].delegate = self;        // 미션 받기를 위한 델리게이트 메소드 포함함
     
@@ -82,8 +75,7 @@
 
 
 
-// TableView
-
+// TableView DataSource delegate Methods --------------//
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
@@ -107,24 +99,16 @@
     return missionCell;
 }
 
-// 이상하게 이렇게 했을 때 이상하게 동작함
-//- (IBAction)clickAddCustomMissionBtn:(UIButton *)sender {
-//    
-//    [sender setSelected:!sender.selected];
-//    if (sender.selected) {
-//        
-//    } else {
-//
-//    }
-//}
 
-// 이와 유사한 selected 프로퍼티 쓰는 코드들 전부 꼭 이상하게 동작함...
-// [self.addCustomMissionBtn setSelected:!self.addCustomMissionBtn.selected];
 
-// 아래처럼 오토레이아웃 걸어놓은 뷰 객체들의 프로퍼티를 건드릴 때, 전부 문제임
-// [self.missionTextField setText:@""];
+// 커스텀 미션 입력, TextField 관련 메서드 --------------------//
 
-// 일단, TableView Auto Layout 풀고 코드로 처리함..
+- (IBAction)clickAddCustomMissionBtn:(id)sender {
+    
+    [self toggleCustomMissionTextField];
+}
+
+// TextField 토글, TableView 위치 조정 메서드
 
 - (void)toggleCustomMissionTextField {
     
@@ -150,10 +134,7 @@
 }
 
 
-- (IBAction)clickAddCustomMissionBtn:(id)sender {
-    
-    [self toggleCustomMissionTextField];
-}
+// TextField 옆 미션 추가 버튼 액션
 
 - (IBAction)missionAdd:(id)sender {
     
@@ -165,11 +146,15 @@
     [self.missionTableView reloadData];
 }
 
+// 키보드 리턴 처리
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     
     return YES;
 }
+
+// 커스텀 미션 추가할 텍스트 없을 때, 미션 추가 버튼 Disabled
 
 - (void)editMissionTextField:(UITextField *)sender {
     
@@ -193,7 +178,7 @@
 }
 
 
-// 미션태그 ViewController
+// 미션태그 ViewController ------------------------------//
 
 - (IBAction)clickMissionTagBtn:(id)sender {
     
@@ -213,13 +198,18 @@
 }
 
 
-// tag 세팅 VC에서 Done버튼 눌렀을 때 불림
+// MissionTagVC에서 선택완료(Done)버튼 눌렀을 때 불리는 Delegate Method
 
 - (void)didSelectedDoneBtn {
     [self.missionTagBtn setEnabled:YES]; // 버튼 다시 활성화
 
     [self.missionTableView reloadData];
 }
+
+
+// 미션 보내기&받기 관련 메서드 ------------------------------//
+
+// 미션 보내기 버튼 액션 메서드
 
 - (IBAction)clickSendMissionBtn:(id)sender {
     
@@ -235,6 +225,9 @@
 
 // DataCenter Mission 여부 delegate 메소드들
 
+
+// 보낸 미션 처리
+
 - (void)hasSendedMission:(BOOL)hasSendedMission {
     
     if (hasSendedMission) {
@@ -248,6 +241,8 @@
     }
 }
 
+// 받은 미션 처리
+
 - (void)hasReceivedMission:(BOOL)hasReceivedMission {
     
     if (hasReceivedMission) {
@@ -257,7 +252,9 @@
     }
 }
 
-// 미션 뷰 (bell 버튼)
+
+
+// 미션 뷰 ViewController (bell 버튼 액션) ----------------//
 
 - (IBAction)enterMissionView:(id)sender {
     
