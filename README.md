@@ -7,7 +7,8 @@
 #### FastCampus Hackathon   
 #### iOS School X UX/UI School  
 
-#### 17.03.13 : [PingPong](https://github.com/Jeheonjeol/CoupleMissionAPP/tree/master/PingPong) 
+#### 17.03.13 : [PingPong](https://github.com/Jeheonjeol/CoupleMissionAPP/tree/master/PingPong)  
+#### [Youtube 영상 보기!](https://www.youtube.com/embed/8z1CnH1UsCg)
 
 <img src="./img/pingpong.gif?raw=true" width="250"> 
 <img src="./img/pingpong2.gif?raw=true" width="250">
